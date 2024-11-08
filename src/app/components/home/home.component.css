@@ -1,0 +1,66 @@
+.loadingImg {
+    align-self: center;
+    justify-self: center;
+    margin-top: 3em;
+}
+
+@keyframes frames {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeinframes {
+    0% { opacity: 0; margin-top: -50px; }
+    50% { margin-top: inherit; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeinfixedframes {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeinwaitframes {
+    0% { opacity: 0; margin-top: -50px;}  
+    50% { opacity: 0; margin-top: -50px;}  
+    75% { margin-top: inherit; } 
+    100% { opacity: 1; }
+}
+
+@keyframes fadeinwaitframes {
+    0% { opacity: 0; margin-top: -50px;}  
+    50% { opacity: 0; margin-top: -50px;}  
+    75% { margin-top: inherit; } 
+    100% { opacity: 1; }
+}
+
+
+.rotateSlow {
+    animation: frames 2s linear infinite;
+}
+
+
+.fadeIn {
+    animation: fadeinframes 3s;
+}
+
+.fadeInWait {
+    animation: fadeinwaitframes 4s;
+}
+
+.fadeInFixed {
+    animation: fadeinfixedframes 4s;
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    justify-self: center;
+    color: var(--primary-dark);
+}
+
+.fadeInImage {
+    animation: fadeinwaitframes 6s;
+    height: 300px;
+    width: 300px;
+}

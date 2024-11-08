@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Item } from '../boutique.types';
+import { Item } from '../../../api/models/boutique.types';
 
 @Component({
   selector: 'app-item',

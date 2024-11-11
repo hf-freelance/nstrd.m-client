@@ -1,0 +1,44 @@
+<section>
+      @defer {
+        <div class="contact">
+          <div class="grid grid-cols-1 md:grid-cols-2 justify-around md:divide-x divide-x-reverse w-full gap-4 py-6" >
+            <form [formGroup]="contactFormGroup"  (ngSubmit)="onSubmit()" class="contactForm grid px-12">
+              <label >
+                Email:
+                <input class="rounded-lg w-full"  type="email" formControlName="email">
+              </label>
+              <br>
+              <label >
+                Name:
+                <input class="rounded-lg w-full"  type="text" formControlName="name">
+              </label>
+              <br>
+              <label >
+                Object:
+                <input class="rounded-lg w-full"  type="text" formControlName="object">
+              </label>
+              <br>
+              <label >
+                Message:
+                <textarea rows="5" class="rounded-lg w-full"  type="text" formControlName="message"></textarea>
+              </label>
+              <br>
+              <div class="w-full flex justify-end">
+                <button type="submit" class="btnContact rounded-lg text-white focus:ring-2 focus:outline-none font-medium text-sm px-4 py-2">Envoyer</button>
+              </div>
+            </form>
+            <div class="justify-center items-center flex flex-col pl-6 gap-2">
+              <img [ngSrc]="logoTopUrl" [alt]="" class="rotateSlow py-1" width="30" height="30" />
+              <img [ngSrc]="logoBtmUrl" [alt]="" class="" width="36" height="150" />
+            </div>
+
+          </div>
+
+        </div>
+      }
+      @loading (minimum 1s) {
+        <div class="fadeIn flex justify-center">
+          <img [ngSrc]="logoUrl" priority [alt]="" class="loadingImg rotateSlow" width="18" height="75" />
+        </div>
+      }
+</section>

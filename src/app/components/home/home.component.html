@@ -64,9 +64,9 @@
                 <h3 class="border-box border-gray-100 rounded-lg bg-orange-200">Artisanat</h3>
               </div>
           </div>
-          <img [ngSrc]="birdUrl" height="100" width="100" class="fadeInFixed loadingImg" />
+          <img [ngSrc]="birdUrl" priority height="100" width="100" class="fadeInFixed loadingImg" />
           <div class="gridImg flex items-center justify-between grid grid-cols-1 md:grid-cols-4 rounded-lg">
-            <img [ngSrc]="lino1Url" height="150" width="150" class="fadeInImage object-cover aspect-square w-full p-2" />
+            <img [ngSrc]="lino1Url" priority height="150" width="150" class="fadeInImage object-cover aspect-square w-full p-2" />
             <img [ngSrc]="lino2Url" height="150" width="150" class="object-cover aspect-square fadeInImage w-full p-2" />
             <img [ngSrc]="lino3Url" height="150" width="150" class="object-cover aspect-square fadeInImage w-full p-2" />
             <img [ngSrc]="lino4Url" height="150" width="150" class="object-cover aspect-square fadeInImage w-full p-2" />
@@ -75,7 +75,7 @@
       }
       @loading (minimum 4s) {
         <div class="home fadeIn">
-          <img [ngSrc]="logoUrl" [alt]="" class="loadingImg rotateSlow" width="80" height="80" />
+          <img [ngSrc]="logoUrl" [alt]="" priority class="loadingImg rotateSlow" width="80" height="80" />
         </div>
       }
 </section>

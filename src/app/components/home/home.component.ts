@@ -18,5 +18,6 @@ export class HomeComponent {
   lino2Url = 'assets/Lino2.jpg';
   lino3Url = 'assets/Lino3.png';
   lino4Url = 'assets/Cera1.jpg';
+  
   hello = () => { this.display = !this.display }
 }

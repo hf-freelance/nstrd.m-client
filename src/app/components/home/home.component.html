@@ -65,16 +65,12 @@
               </div>
           </div>
           <img [ngSrc]="birdUrl" height="100" width="100" class="fadeInFixed loadingImg" />
-          <div class="flex items-center justify-between grid grid-cols-1 md:grid-cols-3 rounded-lg ">
-            <img [ngSrc]="lino1Url" height="300" width="300" class="fadeInImage loadingImg" />
-            <img [ngSrc]="lino2Url" height="300" width="300" class="fadeInImage loadingImg" />
-            <img [ngSrc]="lino3Url" height="300" width="300" class="fadeInImage loadingImg" />
-            <img [ngSrc]="lino4Url" height="300" width="300" class="fadeInImage loadingImg" />
-
+          <div class="gridImg flex items-center justify-between grid grid-cols-1 md:grid-cols-4 rounded-lg">
+            <img [ngSrc]="lino1Url" height="150" width="150" class="fadeInImage object-cover aspect-square w-full p-2" />
+            <img [ngSrc]="lino2Url" height="150" width="150" class="object-cover aspect-square fadeInImage w-full p-2" />
+            <img [ngSrc]="lino3Url" height="150" width="150" class="object-cover aspect-square fadeInImage w-full p-2" />
+            <img [ngSrc]="lino4Url" height="150" width="150" class="object-cover aspect-square fadeInImage w-full p-2" />
           </div>
-
-
-
         </div>
       }
       @loading (minimum 4s) {

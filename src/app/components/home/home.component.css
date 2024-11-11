@@ -61,6 +61,4 @@
 
 .fadeInImage {
     animation: fadeinwaitframes 6s;
-    height: 300px;
-    width: 300px;
 }

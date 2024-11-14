@@ -1,5 +1,9 @@
 export interface Item {
-    name: String;
+    title: String;
+    caption: String;
+    imgReference: String;
+    price: Number;
+    category: string;
     available: Boolean;
 }
 

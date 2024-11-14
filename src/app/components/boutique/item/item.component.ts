@@ -9,5 +9,12 @@ import { Item } from '../../../api/models/boutique.types';
   styleUrl: './item.component.css'
 })
 export class ItemComponent {
-  @Input() item: Item = {name:'', available:false};
+  @Input() item: Item = {
+    title: '',
+    caption: '',
+    imgReference: '',
+    price: 0,
+    category: '',
+    available: false,
+  };
 }

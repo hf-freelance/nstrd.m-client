@@ -24,5 +24,6 @@ export class ContactComponent {
   });
 
   onSubmit() {
-    console.log(this.contactFormGroup)}
+    console.log(this.contactFormGroup)
+  }
 }

@@ -7,11 +7,30 @@ html {
 }
 
 
-@keyframes frames {
+@keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
 .rotateSlow {
-    animation: frames 4s linear infinite;
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; margin-top: -50px; }
+    50% { margin-top: inherit; }
+    100% { opacity: 1; }
+}
+
+
+.fadeinQuick {
+    animation: fadein 2s linear;
+}
+
+.fadeinSlow {
+    animation: fadein 4s linear;
+}
+
+.fadeinXSlow {
+    animation: fadein 6s linear;
 }

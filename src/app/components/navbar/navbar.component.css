@@ -3,8 +3,11 @@
 }
 
 .navtitle {
-    font-family: 'Lucida Sans Unicode';
+    font-family: 'jmh';
+    letter-spacing: 0.05em;
+    font-size: 18px;
 }
+
 .btnBoutique {
     background-color: #0B634C;
 }

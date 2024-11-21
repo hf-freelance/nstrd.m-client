@@ -53,7 +53,7 @@
 }
 
 .title {
-    font-size: 24px;
+    font-size: 48px;
     text-align: center;
     justify-self: center;
     color: var(--primary-dark);
@@ -61,4 +61,12 @@
 
 .fadeInImage {
     animation: fadeinwaitframes 8s;
+}
+
+
+.homeCards h3 {
+    background-color: var(--primary-fadded);
+    font-size: 24px;
+    cursor: pointer;
+    font-family: 'daisy';
 }

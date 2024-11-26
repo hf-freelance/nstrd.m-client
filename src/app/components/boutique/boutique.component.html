@@ -1,16 +1,16 @@
 <section>
     <div class="flex items-center justify-center gap-3">
         @for (c of categories; track c) {
-            <button class="bg-white  rounded-sm p-2 text-sm">{{c.label}}</button>
+            <button type="button" class="bg-white rounded-sm p-2 text-sm" (click)="filterCategory(c.label)">{{c.label}}</button>
         }
     </div>
-    <div class="grid p-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-2 gap-3">
-            @for(i of items; track i.name) {
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-8 md:px-24 lg:px-32 py-6 gap-8">
+            @for(i of displayedItems; track i.name) {
                 @if (i.available) {
                         <app-item [item]="i" />
                 }
             }
-            @for(i of items; track i) {
+            @for(i of displayedItems; track i) {
                 @if (!i.available) {
                         <app-item [item]="i" />
                 }

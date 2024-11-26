@@ -60,7 +60,7 @@
 }
 
 .fadeInImage {
-    animation: fadeinwaitframes 8s;
+    animation: fadeinwaitframes 10s;
 }
 
 
@@ -70,3 +70,47 @@
     cursor: pointer;
     font-family: 'daisy';
 }
+
+.leaf {
+    width: var(--size);
+    height: var(--size);
+    background: url('./tenailletop.svg') no-repeat center/contain;
+    position: absolute;
+    top: -150px;
+    left: var(--left);
+    animation: sway var(--speed) ease-in-out, fall var(--speed) linear infinite;
+}
+
+  @keyframes fall {
+    0% {
+      top: -100px;
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+      top: 70%;
+      opacity: 0;
+      transform: rotate(var(--rotation));
+    }
+  }
+  
+  @keyframes sway {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(140px);  
+    }
+    50% {
+      transform: translateX(-140px);
+    }
+    75% {
+      transform: translateX(140px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

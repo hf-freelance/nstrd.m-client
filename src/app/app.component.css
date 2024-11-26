@@ -50,9 +50,3 @@
     position: relative;
     font-family: "please";
   }
-
-  .divider {
-    width: 1px;
-    background: var(--red-to-pink-to-purple-vertical-gradient);
-    margin-inline: 0.5rem;
-  }

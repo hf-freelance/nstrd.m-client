@@ -51,6 +51,16 @@ h1, h2, h3 {
     animation: rotate 4s linear infinite;
 }
 
+@keyframes fadeout {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fadeOut {
+    animation: fadeout 2s linear;
+}
+
 @keyframes fadein {
     0% { opacity: 0; margin-top: -50px; }
     50% { margin-top: inherit; }
@@ -68,4 +78,32 @@ h1, h2, h3 {
 
 .fadeinXSlow {
     animation: fadein 6s linear;
+}
+
+
+/* Étincelles */
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--bg-color);
+    border-radius: 150%;
+    pointer-events: none;
+    opacity: 0;
+    animation: sparkle-animation 1s ease-in-out forwards;
+}
+
+@keyframes sparkle-animation {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.2;
+    }
+    60% {
+        transform: translate(var(--translate-x), var(--translate-y)) scale(var(--scale-max));
+        opacity: 0.4;
+    }
+    100% {
+        transform: translate(var(--translate-x), var(--translate-y-drop)) scale(0);
+        opacity: 0;
+    }
 }

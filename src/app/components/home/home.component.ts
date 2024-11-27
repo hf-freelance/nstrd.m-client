@@ -9,7 +9,9 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(private renderer: Renderer2) {
+  constructor(private renderer: Renderer2) {}
+
+  ngAfterInit() {
     let i = 0;
     setTimeout(() => {
       while (i < 40) {
@@ -21,9 +23,6 @@ export class HomeComponent {
   private lastSparkleTime = 0;
   private throttleInterval = 100;
 
-  title = 'nstrd.m-client';
-  message = 'Bonjour';
-  display = false;
   logoUrl = "assets/moth2.png";
   birdUrl = "assets/Lino00.png";
   lino1Url = 'assets/Lino1.jpg';
@@ -31,28 +30,21 @@ export class HomeComponent {
   lino3Url = 'assets/Lino3.png';
   lino4Url = 'assets/Cera1.jpg';
   
-  hello = () => { this.display = !this.display }
-
-
-
   createLeaf(): void {
     const leaf = this.renderer.createElement('div');
     this.renderer.addClass(leaf, 'leaf');
 
-    // Génération des valeurs aléatoires
     const randomLeft = Math.floor(20 + Math.random() * 60);
     const randomSpeed = 3 + Math.random() * 4;
     const randomSize = Math.floor(50 + Math.random() * 150);
     const randomRotation = Math.floor(360 + Math.random() * 1080);
 
-    // Définition des variables CSS personnalisées directement sur l'élément
     leaf.style.setProperty('--left', `${randomLeft}%`);
     leaf.style.setProperty('--speed', `${randomSpeed}s`);
     leaf.style.setProperty('--size', `${randomSize}px`);
     leaf.style.setProperty('--rotation', `${randomRotation}deg`);
 
     this.renderer.appendChild(document.body, leaf);
-
     leaf.addEventListener('animationend', () => {
       this.renderer.removeChild(document.body, leaf);
     });

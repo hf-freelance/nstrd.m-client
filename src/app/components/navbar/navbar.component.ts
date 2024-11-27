@@ -13,7 +13,7 @@ export class NavBarComponent {
   constructor(private renderer: Renderer2) {}
   logoUrl = 'assets/logo.svg'
   private lastSparkleTime = 0;
-  private throttleInterval = 100;
+  private throttleInterval = 1000;
 
   onMouseMove(event: MouseEvent): void {
     const currentTime = Date.now();
@@ -25,7 +25,6 @@ export class NavBarComponent {
   }
 
   createSparkle(x: number, y: number): void {
-    // Créer l'élément pour l'étincelle
     const sparkle = this.renderer.createElement('div');
     this.renderer.addClass(sparkle, 'sparkle');
 
@@ -40,7 +39,6 @@ export class NavBarComponent {
     sparkle.style.setProperty('--translate-y-drop', `${randomY+20}px`);
     sparkle.style.setProperty('--bg-color', `#${randomColorR + randomColorV + randomColorB}`);
     sparkle.style.setProperty('--scale-max', `1`);
-
 
     this.renderer.setStyle(sparkle, 'left', `${x}px`);
     this.renderer.setStyle(sparkle, 'top', `${y}px`);
